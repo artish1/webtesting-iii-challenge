@@ -1,26 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders dashboard according to snapshot 1`] = `
+exports[`renders controls component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="display panel"
-      >
-        <div
-          class="led green-led"
-          data-testid="lock-display"
-        >
-          Unlocked
-        </div>
-        <div
-          class="led green-led"
-          data-testid="close-display"
-        >
-          Open
-        </div>
-      </div>
       <div
         class="controls panel"
       >
@@ -41,22 +25,6 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <div
-      class="display panel"
-    >
-      <div
-        class="led green-led"
-        data-testid="lock-display"
-      >
-        Unlocked
-      </div>
-      <div
-        class="led green-led"
-        data-testid="close-display"
-      >
-        Open
-      </div>
-    </div>
     <div
       class="controls panel"
     >
