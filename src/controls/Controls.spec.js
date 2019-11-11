@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from "@testing-library/react";
+import {render, fireEvent} from "@testing-library/react";
 // Test away!
 import Controls from "./Controls"
 
@@ -38,3 +38,22 @@ describe("disables buttons depending on closed/locks states", ()=> {
         expect(getByTestId("toggle-lock-button").disabled).toBe(true);
     });
 })
+
+describe("Tests button click events in Controls", () => {
+    it("toggles closed on click", ()=> {
+        const mock = jest.fn();
+        const wrapper = render(<Controls toggleClosed={mock}/>);
+        const lockBtn = wrapper.getByTestId("toggle-close-button");
+        fireEvent.click(lockBtn);
+        expect(mock).toBeCalled();
+    })
+
+    it("toggles locked on click", ()=> {
+        const mock = jest.fn();
+        const wrapper = render(<Controls closed toggleLocked={mock}/>);
+        const lockBtn = wrapper.getByTestId("toggle-lock-button");
+        fireEvent.click(lockBtn);
+        expect(mock).toBeCalled();
+    });
+
+} )
